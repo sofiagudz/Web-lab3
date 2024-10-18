@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style-flexbox.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        html {
+    font-family: sans-serif;
+}
+#main-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 90%;
+    flex-wrap: wrap;
+}
+#div1{
+    display: flex; 
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+    background-color: #96aad4;
+    height: 22vh;
+    width: 80%;
+    border: 2px solid black;
+}
+#h1-1{
+    width: 24%;
+    margin-left: 1%;
+    padding-right: 1%;
+    border: 2px solid black;
+    text-align: right;
+    flex-wrap: wrap;
+    background-color: white;
+    font-size: calc(1.5vw + 1em);
+    overflow: hidden;
+}
+#div2{
+    display: flex;
+    width: 80%;
+    height: auto;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    overflow: hidden;
+}
+#div2-1{
+    flex-basis: 26%;
+    background-color: #ebd4be;
+    border-right: 2px solid black;
+    padding: 3% 0.7% 3% 0.9%;
+    overflow: hidden;
+}
+#div2-2{
+    flex-basis: 6%;
+    border-right: 2px solid black;
+}
+#div2-3{
+    flex-basis: 20%;
+    background-color: #b0cfb4;
+    border-right: 2px solid black;
+    padding: 3% 0.7% 3% 0.9%;
+    /* height: auto; */
+    overflow: hidden;
+}
+#div2-4{
+    flex-basis: 6%;
+    border-right: 2px solid black;
+}
+#div2-5{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+}
+#div2-5-1{
+    height: 30%;
+    background-color: #ebd4be;
+    border-bottom: 2px solid black;
+    padding: 3% 0.7% 2% 2.1%;
+    height: auto;
+    overflow: hidden;
+}
+#div2-5-2{
+    flex-grow: 1;
+    display: flex;
+    height: auto;
+}
+#div2-5-2-1{
+    flex-basis: 44%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-right: 2px solid black;
+    /* padding: 3% 0.7% 0 2.1%; */
+    overflow: hidden;
+}
+#div2-5-2-2{
+    flex-basis: 14%;
+    border-right: 2px solid black;
+}
+#div2-5-2-3{
+    flex-basis: 44%;
+    background-color: #b0cfb4;
+    padding: 3% 0.7% 3% 2.1%;
+    overflow: hidden;
+}
+#div3{
+    display: flex; 
+    align-items: center;
+    border: 2px solid black;
+    width: 80%;
+    height: 22vh;
+    gap: 20px;
+    justify-content: flex-end;
+    background-color: #96aad4;
+}
+#h1-2{
+    flex-basis: 25%;
+    margin-right: 1%;
+    padding-left: 1%;
+    border: 2px solid black;
+    text-align: left;
+    flex-wrap: wrap;
+    background-color: white;
+    font-size: calc(1.5vw + 1em);
+    overflow: hidden;
+}
+#links{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: 0.5% 0 0.5% 0;
+}
+a{
+    margin-right: 0.5%;
+    font-size: 1.2em;
+    color: #0a0a0a;
+    text-decoration: none;
+}
+.active{
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    color: rgba(26, 54, 211, 0.982);
+    font-size: 1.3em;
+}
+.a-hover:hover{
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    color: rgba(119, 127, 204, 0.982);
+}
+#picture-for-phone{
+    display: none;
+}
+#container2{
+       flex-direction: row;
+    }
+@media (max-width: 768px) {
+    #div2-5-2-1, #div2-5-2-2 {
+        display: none;
+    }
+    #div2-5-2-3{
+        flex-basis: 100%;
+    }
+    #container2{
+        flex-direction: column;
+        flex-basis: 60%;
+    }
+    #div2_1, #div2_3{
+        flex-basis: 60%;
+    }
+    #div2_4{
+        flex-basis: 10%;
+    }
+    #div2_2{
+        display: none;
+    }
+    #picture-for-phone{
+        flex-basis: 44%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    border-right: 2px solid black;
+    /* padding: 3% 0.7% 0 2.1%; */
+    overflow: hidden;
+    }
+    #div2_3{
+        flex-grow: 1;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <div id="links">
+        <a href="index.html" class="active" class="a-hover">Flexbox</a>
+    </div>
+    <div id="main-div">
+        <div id="div1">
+            <div id="h1-1">Apple banks on AI</div>
+        </div>
+        <div id="div2">
+            <div id="container2">
+            <div id="div2-1">
+                With business slumping, Apple has been under pressure to show what it will offer buyers to jumpstart a new wave of iPhone sales.
+On Monday, the technology giant revealed its hand - the iPhone 16 which has a camera button on the outside of the handset.
+The button is an external clue to the changes Apple said it had made inside its latest smartphone, aimed at harnessing the latest in artificial intelligence (AI).
+Apple's chief executive Tim Cook said the upgrades would "push the boundaries of what a smartphone can do" but the firm has tough competition, as other brands have already integrated generative AI features into their handsets.
+            </div>
+            <div id="picture-for-phone">
+                <img src="img/page3-1.png" style=" max-height: 130px; ">
+            </div>
+            <div id="div2-2"></div>
+            <div id="div2-3">
+                Apple's share price fell during its "Glowtime" event, where it unveiled the iPhone 16 as well as other products, and ended the day flat. The company, worth $3 trillion, is facing concern that it is losing its edge in the burgeoning area of artificial intelligence.
+Sales of the iPhone - Apple's most important product which accounts for around half of its total sales - have stalled in recent months. They slipped by 1% over the nine months ended 29 June compared with a year earlier.
+            </div></div>
+            <div id="div2-4"></div>
+            
+            <div id="div2-5">
+                <div id="div2-5-1">
+                    On Monday, Apple also announced updates to its Apple Watch and its AirPod headphones, which will allow them to automatically drop the volume when users start in-person conversations and to decline calls with the shake of a head.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facilis dolorem repudiandae non praesentium sunt reiciendis ex eius dolorum vero. Maiores minima tenetur soluta modi aspernatur facere iusto quidem nihil.
+                </div>
+                <div id="div2-5-2">
+                    <div id="div2-5-2-1">
+                        <img src="img/page3-1.png" style=" max-height: 130px; ">
+                    </div>
+                    <div id="div2-5-2-2"></div>
+                    <div id="div2-5-2-3">
+                        The company said it was expecting marketing approval from regulators for the device "soon" and the feature would be available this autumn in more than 100 countries, including the US, Germany and Japan.
+Previously, the company had a feature that allowed people to pair hearing aids with iPhones.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="div3"><div id="h1-2">BBC</div></div>
+    </div>
+</body>
+</html>
